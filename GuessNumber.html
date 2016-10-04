@@ -9,16 +9,15 @@
 <body>
     
     <p align="center">txt1:
-    <input type="text" id="text1" value="請輸入猜的數字" size="40" > <br><br>
+    <input type="text" id="text1" name="txt1" value="請輸入猜的數字" size="40" > <br><br>
     
-    <input type="Button" id="Button" value="開始猜數字" ><br>    <!--繪製按鈕-->
-<script type="text/JavaScript" src="GuessNumber.js" >
+    <input type="button" id="Button" name="Button" value="開始猜數字" onclick="Button_onclick()" ><br>    <!--繪製按鈕-->
 
-</script>
 
     txt2:
-    <input type="text" id="text2" value="猜的結果" size="40"><br> 
+    <input type="text" id="text2" name="txt2" value="猜的結果" size="40"><br> 
     
     <div id="debug"> </div>
+    <script  src="GuessNumber.js" ></script>
 </body>
 </html>
