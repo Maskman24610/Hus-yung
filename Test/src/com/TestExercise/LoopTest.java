@@ -12,6 +12,7 @@ public class LoopTest {
      double v1=0;
      int v2=0;
 	public static void main(String[] args) {
+		LoopTest loop=new LoopTest();
 		try{
 		  boolean isOK=true;
 		  while(isOK){
@@ -27,16 +28,22 @@ public class LoopTest {
             }
             
 		  }//end while loop
-		  System.out.println("第 "+n+" 項為:"+febo(n));
+		  long crt_time=System.currentTimeMillis();
+		  System.out.println("第 "+n+" 項為:"+loop.febo(n));
+		  long febotime=System.currentTimeMillis()-crt_time;
+		  System.out.println(febotime);
           System.out.println("-------------------");
-          System.out.println("第 "+n+" 項為:"+new LoopTest().febo2(n));
+//          double crt_time2=System.currentTimeMillis();
+//          System.out.println("第 "+n+" 項為:"+loop.febo2(n));
+//          double febotime2=System.currentTimeMillis()-crt_time2;
+//          System.out.println(febotime2);
 		}  
 		catch(IOException e){
 			System.out.println(e.toString());
 		}
 		
 	}
-  private static int febo(int n){      //遞迴解
+  private  int febo(int n){      //遞迴解
 	  if(n==1||n==2){
 		return 1;
 	  }
